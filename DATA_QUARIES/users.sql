@@ -1,4 +1,5 @@
-Create table users 
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+Create TABLE users 
 (
 	user_id SERIAL PRIMARY KEY,
 	name VARCHAR(100) NOT NULL,
@@ -22,4 +23,4 @@ VALUES
 
 ('Ajay Bhatt','ajay@xyz.com',crypt('password1234',gen_salt('bf')),4),
 
-('Danish Khan','danish@xyz.com',crypt('password1234',gen_salt('bf')),5);
+('Danish Khan','danish@xyz.com',crypt('password1234',gen_salt('bf')),8);
